@@ -18,6 +18,7 @@
     --icon-color:#AFB1B8;
     --icon-hover-color:#2196F3;
     --icon-bg-color:rgba(255, 255, 255, 0.1);
+    --bg-modal-color:rgba(0, 0, 0, 0.2);
 }
 ul{
     padding: 0;
@@ -271,6 +272,24 @@ margin-bottom: 16px;
 }
 .work-list .item+.item{
     margin-left: 30px;
+}
+.work-items{
+    position: relative;
+}
+.work-list-title{
+    font-size: 14px;
+    width: 100%;
+    line-height: 1.1;
+    color: var(--white-bg-color);
+    text-align: center;
+    align-items: center;
+    background-color:rgba(47, 48, 58, 0.8);
+    padding-bottom: 27px;
+    padding-top: 27px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 /* Наша команда */
 .author{
@@ -589,4 +608,72 @@ color: var(--primary-text-color);
 }
 .features-list:hover{
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.features-about{
+    position: relative;
+}
+
+.features-title-hover{
+    background-color:rgba(33, 150, 243, 0.9);;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 63px;
+    padding-bottom: 63px;
+    opacity: 0;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--white-bg-color);
+
+}
+.features-title-hover:hover{
+    opacity: 1;
+}
+/* Модальне вікно */
+.backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    min-width: 100%;
+    min-height: 100%;
+
+    background-color: var(--bg-modal-color);
+}
+.backdrop.is-hidden{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 528px;
+    height: 581px;
+
+    background-color: var(--white-bg-color);
+}
+.icon-close{
+    fill: var(--black-color);
+    border-radius: 50%;
+    background-color: var(--white-bg-color);
+}
+.button-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--white-bg-color);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
 }
