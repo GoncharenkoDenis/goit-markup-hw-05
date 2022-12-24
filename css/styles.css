@@ -120,6 +120,7 @@ text-decoration: none;
 font-weight: 500;
 line-height: 1.1;
 letter-spacing: 0.02em;
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .site-nav .item{
     padding: 0;
@@ -161,7 +162,7 @@ letter-spacing: 0.02em;
     display: flex;
     list-style: none;
     justify-content: center;
-    align-items: center;
+    align-items: baseline;
 }
 .contact .item {
     margin-right: 50px;
@@ -171,19 +172,26 @@ letter-spacing: 0.02em;
 }
 .contact-list{
     color: var(--primary-text-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-list:hover{
     color: var(--accent-color);
-    fill: currentColor;
+    
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-list:focus{
     color: var(--accent-color);
 }
 .icon-tel{
     margin-right: 10px;
+    fill: var(--primary-text-color);
 }
 .icon-mail{
     margin-right: 10px;
+    fill: var(--primary-text-color);
+}
+.contact-list:hover .icon-tel,.contact-list:hover .icon-mail{
+fill: currentColor;
 }
 .link{
     position: relative;
@@ -390,10 +398,12 @@ text-align: center;
     justify-content: center;
     align-items: center;
     color: var(--icon-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .teams-soc-link:hover{
     background-color: var(--icon-hover-color);
     color: var(--white-bg-color);
+    
 }
 .teams-soc-icon{
     fill: currentColor;
@@ -418,6 +428,7 @@ text-align: center;
     justify-content: center;
     align-items: center;
     color: var(--icon-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-link:hover{
    color: var(--accent-color);
@@ -427,6 +438,7 @@ text-align: center;
     height: 92px;
     border: 1px solid var(--icon-color);
 border-radius: 4px;
+transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-items:hover{
     border: 1px solid var(--accent-color);
@@ -452,8 +464,6 @@ border-radius: 4px;
     margin-bottom: 20px;
 }
 .logo-footer{
-margin-bottom: 20px;
-
 font-family: Raleway, sans-serif;
 text-decoration: none;
 color:var(--white-bg-color);
@@ -485,9 +495,7 @@ list-style: none;
 }
 .adres-list{
     padding: 0%;
-}
-.footer-wrap{
-    display: flex;
+    margin-top: 20px;
 }
 .footer-soc{
     margin-left: 70px;
@@ -523,6 +531,7 @@ color: var(--white-bg-color);
     align-items: center;
     background-color: var(--icon-bg-color);
     color:var(--white-bg-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-soc-link:hover{
     background-color: var(--icon-hover-color);
@@ -533,6 +542,10 @@ color: var(--white-bg-color);
 }
 .footer-soc-items:not(:last-child){
     margin-right: 10px;
+}
+.footer-container{
+    display: flex;
+    align-items: baseline;
 }
 /* button */
 .button{
@@ -561,6 +574,7 @@ letter-spacing: 0.06em;
 color: var(--page-bg-color);
 background-color: var(--accent-color);
 }
+
 /* BUTTON */
 .button{
     border-radius: 4px;
@@ -728,3 +742,11 @@ color: var(--primary-text-color);
     border: 1px solid rgba(0, 0, 0, 0.1);
     
 }
+
+
+
+
+
+
+/* КУБИК */
+/* 250ms cubic-bezier(0.4, 0, 0.2, 1) */
